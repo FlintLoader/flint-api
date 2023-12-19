@@ -1,0 +1,95 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'flint-steel' version '0.1.0'
+    id 'com.github.johnrengelman.shadow' version '8.0.0'
+}
+apply plugin: 'maven-publish'
+
+def baseVersion = "${minecraft_version}-${version_major}.${version_minor}"
+
+group 'net.flintloader'
+
+def ENV = System.getenv()
+if (ENV.BUILD_NUMBER) {
+    var build = (ENV.BUILD_NUMBER.toInteger() - 1)
+    version = "${baseVersion}.${build}"
+} else {
+    version = "${baseVersion}.${version_patch}"
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url = "https://maven.flintloader.net/releases"
+        name = "Flint Releases"
+    }
+    maven {
+        url = "https://maven.flintloader.net/mirror"
+        name = "Flint Mirror"
+    }
+    maven {
+        url = "https://maven.firstdarkdev.xyz/releases"
+        name = "FDD Maven"
+    }
+}
+
+configurations {
+    shaded
+    implementation {
+        extendsFrom shaded
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    mappings steel.officialMojangMappings()
+    modImplementation "net.flintloader:punch:${punch}"
+
+    shaded "me.hypherionmc.moon-config:core:${moon_config}"
+    shaded "me.hypherionmc.moon-config:toml:${moon_config}"
+
+    compileOnly "org.projectlombok:lombok:${lombok}"
+    annotationProcessor "org.projectlombok:lombok:${lombok}"
+
+    testCompileOnly "org.projectlombok:lombok:${lombok}"
+    testAnnotationProcessor "org.projectlombok:lombok:${lombok}"
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId project.group
+            artifactId project.archivesBaseName
+            version project.version
+            artifact remapJar
+        }
+    }
+
+    repositories {
+        maven {
+            url System.getenv("MAVEN_URL")
+            credentials {
+                username System.getenv("MAVEN_USER")
+                password System.getenv("MAVEN_PASS")
+            }
+        }
+    }
+}
+
+shadowJar {
+    from sourceSets.main.output
+
+    configurations = [project.configurations.shaded]
+    dependencies {
+        relocate "me.hypherionmc.moonconfig", "net.flintloader.libs.moonconfig"
+    }
+}
+
+remapJar {
+    dependsOn(shadowJar)
+    shouldRunAfter(shadowJar)
+    input.set shadowJar.archiveFile.get()
+}
+
+prepareRemapJar.dependsOn(shadowJar)

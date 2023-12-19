@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "flintapi",
+  "name": "Flint API",
+  "version": "${version}",
+  "mixins": ["flintloader.core.mixins.json"],
+  "entryPoints": {
+    "main": "net.flintloader.loader.FlintInitializer"
+  }
+}
