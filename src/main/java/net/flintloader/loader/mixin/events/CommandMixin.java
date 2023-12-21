@@ -1,9 +1,9 @@
 package net.flintloader.loader.mixin.events;
 
 import com.google.common.base.Throwables;
+import com.mojang.brigadier.ParseResults;
 import net.flintloader.loader.api.event.common.CommandEvent;
 import net.flintloader.loader.core.event.FlintEventBus;
-import com.mojang.brigadier.ParseResults;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import org.spongepowered.asm.mixin.Mixin;

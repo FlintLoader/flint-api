@@ -1,14 +1,14 @@
 package net.flintloader.loader.client.gui.config;
 
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.vertex.*;
+import me.hypherionmc.moonconfig.core.conversion.SpecComment;
 import net.flintloader.loader.FlintConstants;
 import net.flintloader.loader.client.gui.config.widgets.*;
 import net.flintloader.loader.core.config.ModuleConfig;
 import net.flintloader.loader.core.config.annotations.HideFromScreen;
 import net.flintloader.loader.core.config.annotations.SubConfig;
 import net.flintloader.loader.core.config.annotations.Tooltip;
-import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.*;
-import me.hypherionmc.moonconfig.core.conversion.SpecComment;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;

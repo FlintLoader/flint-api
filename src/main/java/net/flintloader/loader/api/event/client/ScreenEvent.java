@@ -7,8 +7,6 @@ import lombok.Setter;
 import net.flintloader.loader.core.event.FlintEvent;
 import net.minecraft.client.gui.screens.Screen;
 
-import java.util.Objects;
-
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
 public class ScreenEvent extends FlintEvent {

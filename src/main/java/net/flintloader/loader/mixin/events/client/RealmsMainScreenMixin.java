@@ -1,9 +1,9 @@
 package net.flintloader.loader.mixin.events.client;
 
-import net.flintloader.loader.api.event.client.PlayerJoinRealmEvent;
-import net.flintloader.loader.core.event.FlintEventBus;
 import com.mojang.realmsclient.RealmsMainScreen;
 import com.mojang.realmsclient.dto.RealmsServer;
+import net.flintloader.loader.api.event.client.PlayerJoinRealmEvent;
+import net.flintloader.loader.core.event.FlintEventBus;
 import net.minecraft.client.gui.screens.Screen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

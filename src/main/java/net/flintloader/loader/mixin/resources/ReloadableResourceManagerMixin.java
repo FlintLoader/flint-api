@@ -3,16 +3,11 @@ package net.flintloader.loader.mixin.resources;
 import com.mojang.logging.LogUtils;
 import net.flintloader.loader.core.resources.GroupedResourcePack;
 import net.minecraft.server.packs.PackResources;
-import net.minecraft.server.packs.resources.ReloadInstance;
-import net.minecraft.server.packs.resources.ReloadableResourceManager;
 import net.minecraft.util.Unit;
 import org.slf4j.Logger;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.Redirect;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;

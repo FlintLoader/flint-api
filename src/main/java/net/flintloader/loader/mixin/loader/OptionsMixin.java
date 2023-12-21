@@ -1,7 +1,6 @@
 package net.flintloader.loader.mixin.loader;
 
 import net.flintloader.loader.client.keybinding.KeyBindingRegistry;
-import net.flintloader.loader.core.FlintLoader;
 import net.flintloader.loader.core.resources.ModuleNioResoucePack;
 import net.flintloader.loader.core.resources.ModuleResourcePackCreator;
 import net.flintloader.punch.api.PunchLoader;
