@@ -13,11 +13,6 @@ public class ScreenEvent extends FlintEvent {
 
     private final Screen screen;
 
-    @Override
-    public boolean canCancel() {
-        return false;
-    }
-
     @Getter
     public static class Opening extends ScreenEvent {
 

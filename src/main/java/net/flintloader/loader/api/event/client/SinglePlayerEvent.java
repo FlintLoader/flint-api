@@ -11,11 +11,6 @@ public class SinglePlayerEvent extends FlintEvent {
 
     private final Player player;
 
-    @Override
-    public boolean canCancel() {
-        return false;
-    }
-
     public static class PlayerLogin extends SinglePlayerEvent {
 
         public PlayerLogin(Player player) {

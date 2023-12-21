@@ -17,11 +17,6 @@ public class ColorRegistrationEvent {
     public static class Blocks extends FlintEvent {
 
         private final BlockColors colors;
-
-        @Override
-        public boolean canCancel() {
-            return false;
-        }
     }
 
     @RequiredArgsConstructor
@@ -29,11 +24,6 @@ public class ColorRegistrationEvent {
     public static class Items extends FlintEvent {
 
         private final ItemColors colors;
-
-        @Override
-        public boolean canCancel() {
-            return false;
-        }
     }
 
 }

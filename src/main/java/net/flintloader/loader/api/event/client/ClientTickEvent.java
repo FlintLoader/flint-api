@@ -15,8 +15,19 @@ public class ClientTickEvent extends FlintEvent {
 
     private final ClientLevel level;
 
-    @Override
-    public boolean canCancel() {
-        return false;
+    public static class TickStart extends ClientTickEvent {
+
+        public TickStart(ClientLevel level) {
+            super(level);
+        }
+
+    }
+
+    public static class TickEnd extends ClientTickEvent {
+
+        public TickEnd(ClientLevel level) {
+            super(level);
+        }
+
     }
 }

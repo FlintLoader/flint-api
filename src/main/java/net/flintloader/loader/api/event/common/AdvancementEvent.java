@@ -12,9 +12,4 @@ public class AdvancementEvent extends FlintEvent {
 
     private final Advancement advancement;
     private final Player player;
-
-    @Override
-    public boolean canCancel() {
-        return false;
-    }
 }

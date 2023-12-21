@@ -12,9 +12,4 @@ public class LateInitEvent extends FlintEvent {
 
     private final Minecraft minecraft;
     private final Options options;
-
-    @Override
-    public boolean canCancel() {
-        return false;
-    }
 }

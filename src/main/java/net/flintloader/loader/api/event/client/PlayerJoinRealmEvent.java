@@ -10,9 +10,4 @@ import net.flintloader.loader.core.event.FlintEvent;
 public class PlayerJoinRealmEvent extends FlintEvent {
 
     private final RealmsServer server;
-
-    @Override
-    public boolean canCancel() {
-        return false;
-    }
 }

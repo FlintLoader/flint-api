@@ -10,13 +10,6 @@ public final class FlintInitializer implements FlintModule {
     @Override
     public void initializeModule() {
         FlintConstants.LOG.info("Initializing Flint API");
-
-        /*ClientTickEvents.START_CLIENT_TICK.register((listener) -> {
-            ClientTickEvent event = new ClientTickEvent(listener.level);
-            FlintEventBus.INSTANCE.postEvent(event);
-        });*/
-        // TODO Client Tick
-
         FlintEventBus.INSTANCE.registerEventListener(FlintInitializer.class);
     }
 

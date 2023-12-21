@@ -4,9 +4,11 @@ import com.mojang.brigadier.ParseResults;
 import lombok.Getter;
 import lombok.Setter;
 import net.flintloader.loader.core.event.FlintEvent;
+import net.flintloader.loader.core.event.annot.Cancellable;
 import net.minecraft.commands.CommandSourceStack;
 
 @Getter @Setter
+@Cancellable
 public class CommandEvent extends FlintEvent {
 
     private ParseResults<CommandSourceStack> parseResults;
@@ -18,8 +20,4 @@ public class CommandEvent extends FlintEvent {
         this.command = command;
     }
 
-    @Override
-    public boolean canCancel() {
-        return true;
-    }
 }
