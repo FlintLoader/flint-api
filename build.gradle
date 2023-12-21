@@ -18,6 +18,11 @@ if (ENV.BUILD_NUMBER) {
     version = "${baseVersion}.${version_patch}"
 }
 
+steel {
+    accessWidenerPath = file("src/main/resources/flint-core.accesswidener")
+}
+
+
 repositories {
     mavenCentral()
     maven {
@@ -84,12 +89,15 @@ shadowJar {
     dependencies {
         relocate "me.hypherionmc.moonconfig", "net.flintloader.libs.moonconfig"
     }
+
+    setArchiveClassifier('dev-shadow')
 }
 
 remapJar {
+    inputFile.set shadowJar.archiveFile.get()
     dependsOn(shadowJar)
-    shouldRunAfter(shadowJar)
-    input.set shadowJar.archiveFile.get()
+
+    setArchiveClassifier('')
 }
 
 prepareRemapJar.dependsOn(shadowJar)

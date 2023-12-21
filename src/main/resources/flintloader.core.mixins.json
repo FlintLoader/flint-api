@@ -1,7 +1,6 @@
 {
   "compatibilityLevel": "JAVA_17",
   "package": "net.flintloader.loader.mixin",
-  "refmap": "flintloader.core.refmap.json",
   "minVersion": "0.8",
   "client": [
   ],
@@ -18,7 +17,23 @@
     "events.client.ClientLevelMixin",
     "events.client.MinecraftMixin",
     "events.client.RealmsMainScreenMixin",
+    "events.client.ScreenMixin",
     "loader.OptionsMixin",
-    "loader.TitleScreenMixin"
+    "loader.TitleScreenMixin",
+    "resources.ClientPackSourceMixin",
+    "resources.CreateWorldScreenMixin",
+    "resources.DedicatedServerPropertiesMixin",
+    "resources.FallbackResourceManagerMixin",
+    "resources.FontManagerMixin",
+    "resources.KeyedResourceReloadListenerMixin",
+    "resources.LanguageMixin",
+    "resources.MinecraftServerMixin",
+    "resources.MultiPackResourceManagerMixin",
+    "resources.PackMixin",
+    "resources.PackRepositoryMixin",
+    "resources.ReloadableResourceManagerMixin",
+    "resources.ResourceMixin",
+    "resources.SimpleReloadInstanceMixin",
+    "resources.VanillaResourcePackProviderMixin"
   ]
 }

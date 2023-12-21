@@ -4,6 +4,7 @@
   "name": "Flint API",
   "version": "${version}",
   "mixins": ["flintloader.core.mixins.json"],
+  "accessWidener": "flint-core.accesswidener",
   "entryPoints": {
     "main": "net.flintloader.loader.FlintInitializer"
   }
