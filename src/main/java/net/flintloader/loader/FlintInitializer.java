@@ -5,9 +5,7 @@ import net.flintloader.loader.api.event.client.LateInitEvent;
 import net.flintloader.loader.core.event.FlintEventBus;
 import net.flintloader.loader.core.event.annot.EventBusListener;
 
-public class FlintInitializer implements FlintModule {
-
-    public static final FlintInitializer INSTANCE = new FlintInitializer();
+public final class FlintInitializer implements FlintModule {
 
     @Override
     public void initializeModule() {
