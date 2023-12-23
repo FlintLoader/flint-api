@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2023 Flint Loader Contributors
+ *
+ * Licensed under the MIT license
+ */
+
 package net.flintloader.loader.mixin.accessor;
 
 import com.mojang.blaze3d.platform.InputConstants;

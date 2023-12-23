@@ -3,6 +3,7 @@ plugins {
     id 'idea'
     id 'flint-steel' version '0.1.0'
     id 'com.github.johnrengelman.shadow' version '8.0.0'
+    id 'org.cadixdev.licenser' version '0.6.1'
 }
 apply plugin: 'maven-publish'
 
@@ -101,3 +102,12 @@ remapJar {
 }
 
 prepareRemapJar.dependsOn(shadowJar)
+
+license {
+    header = file('HEADER')
+
+    // Apply special license header to matching source files
+    matching(includes: ['net/flintloader/**/resources/**', 'net/flintloader/**/screens/**']) {
+        header = file('licenses/FABRIC_HEADER')
+    }
+}

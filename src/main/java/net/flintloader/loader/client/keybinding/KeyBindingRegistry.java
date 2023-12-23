@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2023 Flint Loader Contributors
+ *
+ * Licensed under the MIT license
+ */
+
 package net.flintloader.loader.client.keybinding;
 
 import com.google.common.collect.Lists;
