@@ -7,6 +7,8 @@
 package net.flintloader.loader;
 
 import net.flintloader.loader.api.FlintModuleContainer;
+import net.flintloader.loader.core.entrypoints.EntryPointHolder;
+import net.flintloader.loader.core.entrypoints.FlintEntryPoints;
 import net.flintloader.loader.core.event.FlintEventBus;
 import net.flintloader.loader.modules.FlintModuleMetadata;
 import net.flintloader.loader.modules.ModuleList;
@@ -110,6 +112,16 @@ public final class FlintLoader {
      */
     public static FlintEventBus eventBus() {
         return FlintEventBus.INSTANCE;
+    }
+
+    /**
+     * Get registered entry points for a specific class and type
+     * @param key The entry point key. For example "early"
+     * @param type The class type
+     * @return A list of registered entry points
+     */
+    public static List<? extends EntryPointHolder<?>> getEntryPointContainers(String key, Class<?> type) {
+        return FlintEntryPoints.getEntrypointContainers(key, type);
     }
 
 }
