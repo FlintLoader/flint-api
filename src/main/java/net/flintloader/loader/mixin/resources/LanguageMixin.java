@@ -18,7 +18,7 @@ package net.flintloader.loader.mixin.resources;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.gson.JsonParseException;
-import net.flintloader.loader.core.resources.ServerLanguageUtil;
+import net.flintloader.loader.registry.resources.ServerLanguageUtil;
 import net.minecraft.locale.Language;
 import org.slf4j.Logger;
 import org.spongepowered.asm.mixin.Final;

@@ -16,8 +16,8 @@
 
 package net.flintloader.loader.mixin.resources;
 
-import net.flintloader.loader.core.resources.BuiltInModuleResourcePackSource;
-import net.flintloader.loader.core.resources.ModuleNioResoucePack;
+import net.flintloader.loader.registry.resources.BuiltInModuleResourcePackSource;
+import net.flintloader.loader.registry.resources.ModuleNioResoucePack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.packs.PackResources;
 import net.minecraft.server.packs.repository.Pack;

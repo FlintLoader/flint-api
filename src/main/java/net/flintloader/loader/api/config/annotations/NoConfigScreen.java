@@ -4,11 +4,15 @@
  * Licensed under the MIT license
  */
 
-package net.flintloader.loader.core.config.annotations;
+package net.flintloader.loader.api.config.annotations;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+/**
+ * @author HypherionSA
+ * Allows Modules to disable Automatic Config Screens
+ */
 @Retention(RetentionPolicy.RUNTIME)
-public @interface HideFromScreen {
+public @interface NoConfigScreen {
 }

@@ -4,7 +4,7 @@
  * Licensed under the MIT license
  */
 
-package net.flintloader.loader.client.keybinding;
+package net.flintloader.loader.registry;
 
 import com.google.common.collect.Lists;
 import it.unimi.dsi.fastutil.objects.ReferenceArrayList;

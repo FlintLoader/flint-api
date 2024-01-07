@@ -4,7 +4,7 @@
  * Licensed under the MIT license
  */
 
-package net.flintloader.loader.core.config.annotations;
+package net.flintloader.loader.api.config.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

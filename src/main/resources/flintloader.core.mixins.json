@@ -20,6 +20,7 @@
     "events.client.ScreenMixin",
     "loader.OptionsMixin",
     "loader.TitleScreenMixin",
+    "loader.info.SystemReportMixin",
     "resources.ClientPackSourceMixin",
     "resources.CreateWorldScreenMixin",
     "resources.DedicatedServerPropertiesMixin",

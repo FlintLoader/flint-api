@@ -8,7 +8,7 @@ package net.flintloader.loader.api.creativetab;
 
 import lombok.Getter;
 import lombok.Setter;
-import net.flintloader.loader.core.systems.internal.CreativeTabRegistry;
+import net.flintloader.loader.registry.CreativeTabRegistry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;

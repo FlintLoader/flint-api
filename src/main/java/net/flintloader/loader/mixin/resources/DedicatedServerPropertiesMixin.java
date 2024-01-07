@@ -16,7 +16,7 @@
 
 package net.flintloader.loader.mixin.resources;
 
-import net.flintloader.loader.core.resources.ModuleResourcePackUtil;
+import net.flintloader.loader.registry.resources.ModuleResourcePackUtil;
 import net.minecraft.server.dedicated.DedicatedServerProperties;
 import net.minecraft.world.level.WorldDataConfiguration;
 import org.spongepowered.asm.mixin.Mixin;

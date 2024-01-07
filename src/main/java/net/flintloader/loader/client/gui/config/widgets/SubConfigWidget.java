@@ -7,7 +7,7 @@
 package net.flintloader.loader.client.gui.config.widgets;
 
 import net.flintloader.loader.client.gui.config.FlintConfigScreen;
-import net.flintloader.loader.core.config.ModuleConfig;
+import net.flintloader.loader.api.config.ModuleConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;

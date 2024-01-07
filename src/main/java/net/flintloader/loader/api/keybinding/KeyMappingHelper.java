@@ -7,7 +7,7 @@
 package net.flintloader.loader.api.keybinding;
 
 import com.mojang.blaze3d.platform.InputConstants;
-import net.flintloader.loader.client.keybinding.KeyBindingRegistry;
+import net.flintloader.loader.registry.KeyBindingRegistry;
 import net.flintloader.loader.mixin.accessor.KeyMappingAccessor;
 import net.minecraft.client.KeyMapping;
 

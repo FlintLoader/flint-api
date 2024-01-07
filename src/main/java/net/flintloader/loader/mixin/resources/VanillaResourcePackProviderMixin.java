@@ -16,7 +16,7 @@
 
 package net.flintloader.loader.mixin.resources;
 
-import net.flintloader.loader.core.resources.ModuleResourcePackCreator;
+import net.flintloader.loader.registry.resources.ModuleResourcePackCreator;
 import net.minecraft.client.resources.ClientPackSource;
 import net.minecraft.server.packs.repository.BuiltInPackSource;
 import net.minecraft.server.packs.repository.Pack;

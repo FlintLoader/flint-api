@@ -17,7 +17,7 @@
 package net.flintloader.loader.mixin.resources;
 
 import com.mojang.logging.LogUtils;
-import net.flintloader.loader.core.resources.GroupedResourcePack;
+import net.flintloader.loader.registry.resources.GroupedResourcePack;
 import net.minecraft.server.packs.PackResources;
 import net.minecraft.util.Unit;
 import org.slf4j.Logger;

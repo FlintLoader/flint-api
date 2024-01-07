@@ -8,6 +8,7 @@ package net.flintloader.loader.core.config;
 
 import me.hypherionmc.moonconfig.core.file.FileWatcher;
 import net.flintloader.loader.FlintConstants;
+import net.flintloader.loader.api.config.ModuleConfig;
 import org.jetbrains.annotations.ApiStatus;
 
 import java.io.Serializable;

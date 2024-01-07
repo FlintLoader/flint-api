@@ -16,8 +16,8 @@
 
 package net.flintloader.loader.mixin.resources;
 
-import net.flintloader.loader.core.resources.ModuleResourcePackCreator;
-import net.flintloader.loader.core.resources.ModuleResourcePackUtil;
+import net.flintloader.loader.registry.resources.ModuleResourcePackCreator;
+import net.flintloader.loader.registry.resources.ModuleResourcePackUtil;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.worldselection.CreateWorldScreen;
 import net.minecraft.server.packs.PackType;
