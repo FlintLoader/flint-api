@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.flintloader.loader.core.resources;
+package net.flintloader.loader.registry.resources;
 
 import com.google.common.base.Charsets;
 import com.google.gson.Gson;

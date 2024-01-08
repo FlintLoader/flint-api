@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.flintloader.loader.core.resources;
+package net.flintloader.loader.registry.resources;
 
 import net.flintloader.loader.api.FlintModuleContainer;
 import net.flintloader.loader.api.resources.ModuleResourcePack;

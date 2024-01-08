@@ -4,7 +4,7 @@
  * Licensed under the MIT license
  */
 
-package net.flintloader.loader.core.systems.internal;
+package net.flintloader.loader.registry;
 
 import net.flintloader.loader.api.creativetab.FlintCreativeModeTab;
 import net.minecraft.world.level.ItemLike;

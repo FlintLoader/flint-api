@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.flintloader.loader.core.resources;
+package net.flintloader.loader.registry.resources;
 
 import net.minecraft.server.packs.PackResources;
 import net.minecraft.server.packs.repository.PackSource;

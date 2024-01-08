@@ -4,7 +4,7 @@
  * Licensed under the MIT license
  */
 
-package net.flintloader.loader.core.config.annotations;
+package net.flintloader.loader.api.config.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -13,9 +13,10 @@ import java.lang.annotation.Target;
 
 /**
  * @author HypherionSA
- * //TODO Currently unused, but to be used with Config Syncing in the future
+ * Provides tooltips to the config GUI
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface Syncable {
+public @interface Tooltip {
+    String[] value();
 }

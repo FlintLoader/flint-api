@@ -16,7 +16,7 @@
 
 package net.flintloader.loader.mixin.resources;
 
-import net.flintloader.loader.core.resources.GroupedResourcePack;
+import net.flintloader.loader.registry.resources.GroupedResourcePack;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackResources;
 import net.minecraft.server.packs.PackType;

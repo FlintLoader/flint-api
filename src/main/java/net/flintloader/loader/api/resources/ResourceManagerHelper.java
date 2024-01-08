@@ -17,7 +17,7 @@
 package net.flintloader.loader.api.resources;
 
 import net.flintloader.loader.api.FlintModuleContainer;
-import net.flintloader.loader.core.resources.ResourceManagerHelperImpl;
+import net.flintloader.loader.registry.resources.ResourceManagerHelperImpl;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;

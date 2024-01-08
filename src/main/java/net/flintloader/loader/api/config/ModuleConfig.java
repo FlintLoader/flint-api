@@ -4,12 +4,13 @@
  * Licensed under the MIT license
  */
 
-package net.flintloader.loader.core.config;
+package net.flintloader.loader.api.config;
 
 import me.hypherionmc.moonconfig.core.CommentedConfig;
 import me.hypherionmc.moonconfig.core.Config;
 import me.hypherionmc.moonconfig.core.conversion.ObjectConverter;
 import me.hypherionmc.moonconfig.core.file.CommentedFileConfig;
+import net.flintloader.loader.core.config.ConfigController;
 
 import java.io.File;
 

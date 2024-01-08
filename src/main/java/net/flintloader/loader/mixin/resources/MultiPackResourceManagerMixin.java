@@ -16,7 +16,7 @@
 
 package net.flintloader.loader.mixin.resources;
 
-import net.flintloader.loader.core.resources.FlintLifecycledResourceManager;
+import net.flintloader.loader.registry.resources.FlintLifecycledResourceManager;
 import net.minecraft.server.packs.PackResources;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.resources.MultiPackResourceManager;

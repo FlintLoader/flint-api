@@ -17,8 +17,8 @@
 package net.flintloader.loader.mixin.resources;
 
 import net.flintloader.loader.api.resources.ModuleResourcePack;
-import net.flintloader.loader.core.resources.FlintWrappedVanillaResourcePack;
-import net.flintloader.loader.core.resources.ModuleResourcePackUtil;
+import net.flintloader.loader.registry.resources.FlintWrappedVanillaResourcePack;
+import net.flintloader.loader.registry.resources.ModuleResourcePackUtil;
 import net.minecraft.client.resources.ClientPackSource;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.packs.AbstractPackResources;

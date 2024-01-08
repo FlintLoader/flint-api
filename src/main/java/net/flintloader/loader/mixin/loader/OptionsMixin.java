@@ -6,9 +6,9 @@
 
 package net.flintloader.loader.mixin.loader;
 
-import net.flintloader.loader.client.keybinding.KeyBindingRegistry;
-import net.flintloader.loader.core.resources.ModuleNioResoucePack;
-import net.flintloader.loader.core.resources.ModuleResourcePackCreator;
+import net.flintloader.loader.registry.KeyBindingRegistry;
+import net.flintloader.loader.registry.resources.ModuleNioResoucePack;
+import net.flintloader.loader.registry.resources.ModuleResourcePackCreator;
 import net.flintloader.punch.api.PunchLoader;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Options;
@@ -45,7 +45,10 @@ public class OptionsMixin {
     @Inject(method = "load", at = @At("HEAD"))
     private void injectKeyBindings(CallbackInfo ci) {
         keyMappings = KeyBindingRegistry.process(keyMappings);
+        handleResources();
+    }
 
+    private void handleResources() {
         /*
          * Copyright (c) 2016, 2017, 2018, 2019 FabricMC
          *

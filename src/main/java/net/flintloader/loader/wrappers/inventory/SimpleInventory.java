@@ -4,7 +4,7 @@
  * Licensed under the MIT license
  */
 
-package net.flintloader.loader.core.systems.inventory;
+package net.flintloader.loader.wrappers.inventory;
 
 import com.google.common.base.Preconditions;
 import net.minecraft.core.NonNullList;
