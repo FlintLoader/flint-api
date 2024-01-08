@@ -7,9 +7,8 @@ plugins {
 }
 apply plugin: 'maven-publish'
 
-def baseVersion = "${minecraft_version}-${version_major}.${version_minor}.${version_patch}"
-
 group 'net.flintloader'
+version = "${minecraft_version}-${version_major}.${version_minor}.${version_patch}"
 
 steel {
     accessWidenerPath = file("src/main/resources/flint-core.accesswidener")
