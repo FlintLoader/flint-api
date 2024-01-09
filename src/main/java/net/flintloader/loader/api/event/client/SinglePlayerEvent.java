@@ -9,19 +9,30 @@ package net.flintloader.loader.api.event.client;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import net.flintloader.loader.core.event.FlintEvent;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.player.Player;
+import org.jetbrains.annotations.Nullable;
 
-@RequiredArgsConstructor
-@Getter
-public class SinglePlayerEvent extends FlintEvent {
 
-    private final Player player;
+public class SinglePlayerEvent {
 
-    public static class PlayerLogin extends SinglePlayerEvent {
+    @RequiredArgsConstructor
+    @Getter
+    public static class PlayerLogin extends FlintEvent {
+        private final LocalPlayer player;
 
-        public PlayerLogin(Player player) {
-            super(player);
-        }
+    }
 
+    @RequiredArgsConstructor
+    @Getter
+    public static class PlayerLogout extends FlintEvent {
+        @Nullable private final LocalPlayer player;
+    }
+
+    @RequiredArgsConstructor
+    @Getter
+    public static class PlayerRespawn extends FlintEvent {
+        private final LocalPlayer oldPlayer;
+        private final LocalPlayer newPlayer;
     }
 }

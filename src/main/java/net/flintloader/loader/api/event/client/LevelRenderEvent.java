@@ -1,29 +1,37 @@
+/*
+ * Copyright (c) 2023 Flint Loader Contributors
+ *
+ * Licensed under the MIT license
+ */
+
 package net.flintloader.loader.api.event.client;
 
+import com.mojang.blaze3d.vertex.PoseStack;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import net.flintloader.loader.core.event.FlintEvent;
+import net.minecraft.client.Camera;
 import net.minecraft.client.renderer.LevelRenderer;
 
-@Getter
-@RequiredArgsConstructor
-public class LevelRenderEvent extends FlintEvent {
+public class LevelRenderEvent {
 
-    private final LevelRenderer context;
+    @Getter
+    @RequiredArgsConstructor
+    public static class Start extends FlintEvent {
 
-    public static class Start extends LevelRenderEvent {
-
-        public Start(LevelRenderer level) {
-            super(level);
-        }
+        private final LevelRenderer context;
+        private final PoseStack poseStack;
+        private final Camera camera;
 
     }
 
-    public static class End extends LevelRenderEvent {
+    @Getter
+    @RequiredArgsConstructor
+    public static class End extends FlintEvent {
 
-        public End(LevelRenderer level) {
-            super(level);
-        }
+        private final LevelRenderer context;
+        private final PoseStack poseStack;
+        private final Camera camera;
 
     }
 

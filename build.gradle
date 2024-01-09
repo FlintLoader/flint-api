@@ -101,3 +101,11 @@ license {
         header = file('licenses/FABRIC_HEADER')
     }
 }
+
+processResources {
+    def buildProps = project.properties.clone()
+
+    filesMatching("flintmodule.json") {
+        expand buildProps
+    }
+}
