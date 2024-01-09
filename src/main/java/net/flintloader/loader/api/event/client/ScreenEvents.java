@@ -103,4 +103,11 @@ public class ScreenEvents extends FlintEvent {
 
     }
 
+    @RequiredArgsConstructor
+    @Getter
+    public static class RenderHUDEvent extends FlintEvent {
+        private final GuiGraphics guiGraphics;
+        private final float tickDelta;
+    }
+
 }
