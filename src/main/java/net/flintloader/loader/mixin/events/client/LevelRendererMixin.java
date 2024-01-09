@@ -18,11 +18,11 @@ public class LevelRendererMixin {
 
     @Inject(method = "renderLevel", at = @At("HEAD"))
     private void injectLevelRenderStartEvent(PoseStack poseStack, float f, long l, boolean bl, Camera camera, GameRenderer gameRenderer, LightTexture lightTexture, Matrix4f matrix4f, CallbackInfo ci) {
-        FlintEventBus.INSTANCE.postEvent(new LevelRenderEvent.Start(((LevelRenderer) (Object) this)));
+        FlintEventBus.INSTANCE.postEvent(new LevelRenderEvent.Start(((LevelRenderer) (Object) this), poseStack, camera));
     }
 
     @Inject(method = "renderLevel", at = @At("RETURN"))
     private void injectLevelRenderEndEvent(PoseStack poseStack, float f, long l, boolean bl, Camera camera, GameRenderer gameRenderer, LightTexture lightTexture, Matrix4f matrix4f, CallbackInfo ci) {
-        FlintEventBus.INSTANCE.postEvent(new LevelRenderEvent.End(((LevelRenderer) (Object) this)));
+        FlintEventBus.INSTANCE.postEvent(new LevelRenderEvent.End(((LevelRenderer) (Object) this), poseStack, camera));
     }
 }
