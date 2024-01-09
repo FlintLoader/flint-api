@@ -9,6 +9,7 @@ package net.flintloader.loader.api.event.client;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import net.flintloader.loader.core.event.FlintEvent;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
 
 /**
@@ -19,20 +20,21 @@ import net.minecraft.client.multiplayer.ClientLevel;
 @Getter
 public class ClientTickEvent extends FlintEvent {
 
+    private final Minecraft minecraft;
     private final ClientLevel level;
 
     public static class TickStart extends ClientTickEvent {
 
-        public TickStart(ClientLevel level) {
-            super(level);
+        public TickStart(Minecraft minecraft, ClientLevel level) {
+            super(minecraft, level);
         }
 
     }
 
     public static class TickEnd extends ClientTickEvent {
 
-        public TickEnd(ClientLevel level) {
-            super(level);
+        public TickEnd(Minecraft minecraft, ClientLevel level) {
+            super(minecraft, level);
         }
 
     }

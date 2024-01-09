@@ -39,11 +39,11 @@ public class MinecraftMixin {
 
     @Inject(method = "tick", at = @At("HEAD"))
     private void injectClientTickStartEvent(CallbackInfo ci) {
-        FlintLoader.eventBus().postEvent(new ClientTickEvent.TickStart(level));
+        FlintLoader.eventBus().postEvent(new ClientTickEvent.TickStart(((Minecraft) (Object) this), level));
     }
 
     @Inject(method =  "tick", at = @At("RETURN"))
     private void injectClientTickEndEvent(CallbackInfo ci) {
-        FlintLoader.eventBus().postEvent(new ClientTickEvent.TickEnd(level));
+        FlintLoader.eventBus().postEvent(new ClientTickEvent.TickEnd(((Minecraft) (Object) this), level));
     }
 }
